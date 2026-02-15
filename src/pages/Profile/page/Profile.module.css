@@ -1,0 +1,41 @@
+
+/* 样式表 */
+.profile-editor-container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.compact-form .ant-form-item {
+  margin-bottom: 16px;
+}
+
+.avatar-container {
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 50%;
+  position: relative;
+}
+
+.ant-upload.ant-upload-select-picture-circle {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+}
+
+.upload-trigger {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+ 
+
+@media (max-width: 576px) {
+  .profile-editor-container {
+    padding: 16px;
+  }
+}

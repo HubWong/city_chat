@@ -1,0 +1,126 @@
+/* UserProfileForm.css */
+.user-profile-form {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.user-profile-form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #444;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+
+.hint {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: #777;
+}
+
+/* 两列布局 */
+.form-columns {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-column {
+  flex: 1;
+}
+
+.form-column .full-width {
+  grid-column: 1 / -1;
+}
+
+/* 底部复选框 */
+.form-footer {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  color: #555;
+}
+
+.checkbox-label input {
+  width: auto;
+  margin: 0;
+}
+
+/* 提交按钮 */
+.submit-btn {
+  width: 100%;
+  padding: 0.875rem;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.submit-btn:hover {
+  background: #0069d9;
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+  .user-profile-form {
+    padding: 1.5rem;
+  }
+
+  .form-columns {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .form-footer {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}

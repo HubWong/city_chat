@@ -1,0 +1,10 @@
+ /* src/components/PricingSection.css */
+
+.pricing-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px 20px;
+  background-color: #f5f7fa;
+}

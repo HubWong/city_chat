@@ -1,0 +1,98 @@
+/* 最小化时的按钮 */
+/* DraggableVideoPlayer.css */
+.video-player-toggle-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99999 !important; /* 更高优先级 */
+  padding: 12px 20px;
+  background-color: #e74c3c; /* 醒目的红色 */
+  color: white;
+  border: 2px solid #c0392b;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.video-player-toggle-btn:hover {
+  background-color: #0056b3;
+}
+
+/* 视频播放器容器 */
+.video-player-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  /* width: 320px;
+  height: 200px; */
+  z-index: 9999;
+  background-color: #000;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* 全屏模式 */
+.video-player-container.fullscreen {
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  border-radius: 0;
+}
+
+/* 拖拽手柄 */
+.drag-handle {
+  padding: 6px 12px;
+  background: #333;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  cursor: move;
+  user-select: none;
+}
+
+/* 视频区域 */
+.video-wrapper {
+  flex: 1;
+  position: relative;
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: #000;
+  outline: none;
+}
+
+/* 控制按钮栏 */
+.video-controls {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 12px;
+  background: #222;
+  color: white;
+}
+
+.control-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 4px 8px;
+}
+
+.control-btn:hover {
+  text-decoration: underline;
+}
+
+/* 全屏时隐藏手柄和控制栏（可选） */
+.video-player-container.fullscreen .drag-handle,
+.video-player-container.fullscreen .video-controls {
+  display: none;
+}

@@ -1,0 +1,15 @@
+.top-nav-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: #001529; /* Ant Design dark theme 背景色，保持一致 */
+}
+
+.top-nav-wrapper .ant-menu {
+  display: flex;
+  font-size: large;
+  justify-content: center;
+  /* 如果 Logo 在左侧，但你希望“所有功能项”居中（不含 Logo），则需调整结构 */
+}

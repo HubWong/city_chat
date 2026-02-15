@@ -1,0 +1,537 @@
+.user-room-page {
+  height: calc(100vh - 45px);
+  background: #f8fafc;
+}
+
+.room-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: calc(100vh - 46px);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ========== 聊天室头部 ========== */
+.room-header {
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #4f46e5;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #eef2ff;
+}
+
+.room-avatar-large {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+}
+
+.room-avatar-large img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #667eea;
+  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.2);
+}
+
+.room-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 0;
+  flex: 1;
+}
+
+.room-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.room-members {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.member-count {
+  color: #64748b;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.member-avatars {
+  display: flex;
+  align-items: center;
+  gap: -8px;
+}
+
+.member-avatars img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.member-avatars img:hover {
+  transform: scale(1.2);
+  z-index: 10;
+}
+
+.more-members {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #e2e8f0;
+  color: #64748b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header-btn {
+  background: none;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.header-btn:hover {
+  background: #f1f5f9;
+  color: #4f46e5;
+}
+
+/* ========== 消息容器 ========== */
+.messages-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #f8fafc;
+  overflow: hidden;
+}
+
+.messages-header {
+  padding: .4rem;
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+  flex-shrink: 0;
+}
+
+.date-divider {
+  text-align: center;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.date-divider::before,
+.date-divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 35%;
+  height: 1px;
+  background: #e2e8f0;
+}
+
+.date-divider::before {
+  left: 0;
+}
+
+.date-divider::after {
+  right: 0;
+}
+
+.date-divider span {
+  background: white;
+  padding: 0 1rem;
+  color: #64748b;
+  font-size: 0.875rem;
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+}
+
+/* ========== 消息列表 ========== */
+.messages-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: #f8fafc;
+}
+
+.messages-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.messages-list::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 10px;
+}
+
+.messages-list::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.messages-list::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* ========== 在线状态 ========== */
+.online-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: white;
+  border-top: 1px solid #e2e8f0;
+  font-size: 0.875rem;
+  color: #64748b;
+  flex-shrink: 0;
+}
+
+.online-dot {
+  width: 8px;
+  height: 8px;
+  background: #10b981;
+  border-radius: 50%;
+  box-shadow: 0 0 6px #10b981;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* ========== 输入区域 ========== */
+.message-input-container {
+  background: white;
+  border-top: 1px solid #e2e8f0;
+  padding: 1rem;
+  flex-shrink: 0;
+}
+
+.input-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.action-btn {
+  background: #f1f5f9;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4f46e5;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.25rem;
+}
+
+.action-btn:hover {
+  background: #eef2ff;
+  transform: scale(1.1);
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.75rem;
+  position: relative;
+}
+
+.message-textarea {
+  flex: 1;
+  padding: 0.875rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 16px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  resize: none;
+  outline: none;
+  max-height: 120px;
+  min-height: 48px;
+  transition: border-color 0.3s ease;
+  line-height: 1.6;
+}
+
+.message-textarea:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.voice-btn,
+.send-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.voice-btn {
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+.voice-btn:hover {
+  background: #e2e8f0;
+  transform: scale(1.05);
+}
+
+.send-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.send-btn:hover:not(:disabled) {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+}
+
+.send-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.send-btn svg {
+  transform: rotate(-45deg);
+}
+
+/* 未找到页面 */
+.room-not-found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+  padding: 2rem;
+}
+
+.not-found-content {
+  text-align: center;
+  background: white;
+  padding: 3rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+}
+
+.not-found-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.room-not-found h2 {
+  font-size: 1.75rem;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.room-not-found p {
+  color: #64748b;
+  margin-bottom: 2rem;
+  font-size: 1.125rem;
+}
+
+.room-not-found button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 0.875rem 2rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.room-not-found button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .room-container {
+    height: calc(100vh - 56px);
+  }
+  
+  .room-header {
+    padding: 0.75rem 1rem;
+  }
+  
+  .room-avatar-large {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .room-title {
+    font-size: 1.125rem;
+  }
+  
+  .member-avatars {
+    display: none;
+  }
+  
+  .messages-list {
+    padding: 1rem;
+  }
+  
+  .message-input-container {
+    padding: 0.75rem;
+  }
+  
+  .input-actions {
+    margin-bottom: 0.5rem;
+  }
+  
+  .action-btn {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .message-textarea {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+    min-height: 44px;
+  }
+  
+  .voice-btn,
+  .send-btn {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+@media (max-width: 480px) {
+  .room-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.75rem;
+  }
+  
+  .header-left {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .room-info {
+    flex: auto;
+  }
+  
+  .header-right {
+    position: absolute;
+    right: 0.75rem;
+    top: 0.75rem;
+  }
+  
+  .back-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 1.25rem;
+  }
+  
+  .room-avatar-large {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .room-title {
+    font-size: 1rem;
+  }
+  
+  .messages-list {
+    padding: 0.75rem;
+  }
+  
+  .online-status {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8125rem;
+  }
+  
+  .message-textarea {
+    font-size: 0.875rem;
+    min-height: 40px;
+  }
+  
+  .voice-btn,
+  .send-btn {
+    width: 40px;
+    height: 40px;
+  }
+}

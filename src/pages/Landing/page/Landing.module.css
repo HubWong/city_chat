@@ -1,0 +1,55 @@
+:root {
+  --primary: #4a69bd;
+  --secondary: #fd79a8;
+  --text: #2d3436;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+section {
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 48px;
+  margin-bottom: 24px !important;
+}
+
+.description {
+  font-size: 18px;
+  color: #666;
+  line-height: 1.8;
+}
+
+.illustration {
+  height: 400px;
+  background: url("../../assets/landing-illustration.svg") no-repeat center;
+  background-size: contain;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 36px;
+  }
+
+  .illustration {
+    height: 300px;
+  }
+}

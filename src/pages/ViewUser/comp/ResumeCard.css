@@ -1,0 +1,198 @@
+/* src/components/ResumeCard.css */
+.resume-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.resume-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.my-resume {
+  border: 2px solid #1890ff;
+}
+
+.my-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #1890ff;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  z-index: 10;
+}
+.resume-card>
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #f0f0f0;
+  background: #f9f9f9;
+  transition: background-color 0.3s ease;
+}
+
+/* 女性简历的红色 header */
+.card-header.female-header {
+  background: #fff1f0;
+  border-bottom-color: #ffccc7;
+}
+
+.name-gender {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.username {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.gender {
+  background: #f5f5f5;
+  color: #666;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* 女性性别的特殊样式 */
+.card-header.female-header .gender {
+  background: #ffe6e6;
+  color: #ff4d4f;
+}
+
+.age {
+  background: #e6f7ff;
+  color: #1890ff;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.card-body {
+  padding: 16px 20px;
+  flex-grow: 1;
+}
+
+.info-row {
+  display: flex;
+  margin-bottom: 12px;
+  align-items: center;
+}
+
+.label {
+  color: #666;
+  font-weight: 500;
+  min-width: 80px;
+}
+
+.value {
+  color: #333;
+  font-weight: 500;
+}
+
+.dowry {
+  color: #52c41a;
+  font-weight: 600;
+}
+
+.city {
+  color: #fa8c16;
+}
+
+.card-footer {
+  padding: 0 20px 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.description {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 12px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.view-detail {
+  color: #1890ff;
+  font-weight: 500;
+  text-align: right;
+  margin-top: auto;
+}
+
+.expiry-indicator {
+  background: #fffbe6;
+  color: #faad14;
+  padding: 8px 16px;
+  text-align: center;
+  font-size: 0.85rem;
+  border-top: 1px solid #ffe58f;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .card-header {
+    padding: 14px 16px;
+  }
+  
+  .name-gender {
+    gap: 8px;
+  }
+  
+  .username {
+    font-size: 1.2rem;
+  }
+  
+  .gender {
+    font-size: 0.85rem;
+    padding: 3px 6px;
+  }
+  
+  .card-body {
+    padding: 14px 16px;
+  }
+  
+  .info-row {
+    margin-bottom: 10px;
+  }
+  
+  .label {
+    min-width: 70px;
+    font-size: 0.9rem;
+  }
+  
+  .card-footer {
+    padding: 0 16px 16px;
+  }
+  
+  .description {
+    font-size: 0.95rem;
+  }
+  
+  .expiry-indicator {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+}

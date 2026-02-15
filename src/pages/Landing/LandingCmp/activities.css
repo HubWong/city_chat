@@ -1,0 +1,34 @@
+activities-section {
+    padding: 2rem;
+    background: white;
+  }
+  .event-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 0;
+  }
+  .event-card {
+    min-width: 250px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  .event-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+  .event-info {
+    padding: 15px;
+    background: white;
+  }
+  .event-info h3 {
+    margin-bottom: 5px;
+    color: #333;
+  }
+  .event-info p {
+    color: #666;
+    font-size: 0.9rem;
+  }
+  

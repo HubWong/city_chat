@@ -1,0 +1,82 @@
+
+/*-----------room-----------------*/
+.edit-room-page {
+  min-height: 100vh;
+  background-color: var(--bg-color);
+}
+
+.edit-room-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--spacing-xl) var(--spacing-md);
+}
+
+.back-button {
+  margin-bottom: var(--spacing-lg);
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.back-button:hover {
+  color: var(--primary-color);
+}
+
+.edit-room-card {
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: var(--spacing-xl);
+}
+
+.edit-room-actions {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: var(--spacing-lg);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--border-color);
+}
+
+.edit-room-loading {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-color);
+}
+
+/* 暗色模式表单适配 */
+.dark .ant-form-item-label > label {
+  color: var(--text-primary);
+}
+
+.dark .ant-input,
+.dark .ant-input-number,
+.dark .ant-input-textarea {
+  background-color: var(--card-bg);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+.dark .ant-input::placeholder,
+.dark .ant-input-number-input::placeholder {
+  color: var(--text-secondary);
+}
+
+.dark .ant-input-textarea textarea::placeholder {
+  color: var(--text-secondary);
+}
+
+.dark .ant-input-number-input {
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+}
+
+.dark .ant-input-number-handler-wrap {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.dark .ant-input-number-handler-down-inner,
+.dark .ant-input-number-handler-up-inner {
+  color: var(--text-primary);
+}

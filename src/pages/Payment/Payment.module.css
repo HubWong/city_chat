@@ -1,0 +1,197 @@
+.paymentContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+  background: #f5f5f5;
+  min-height: 100vh;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 32px;
+  padding: 24px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.planSection {
+  margin-bottom: 24px;
+}
+
+.planCard {
+  position: relative;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  height: 280px;
+}
+
+.planCard:hover {
+  border-color: #1890ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(24, 144, 255, 0.2);
+}
+
+.planCard.selected {
+  border-color: #1890ff;
+  background: #f6ffed;
+}
+
+.planHeader {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.planPrice {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.price {
+  font-size: 32px;
+  font-weight: bold;
+  color: #1890ff;
+}
+
+.planFeatures {
+  space: 8px 0;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.checkIcon {
+  color: #52c41a;
+  margin-right: 8px;
+}
+
+.paymentMethodSection {
+  margin-bottom: 24px;
+}
+
+.paymentMethods {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.paymentMethod {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border-radius: 6px;
+  width: 100%;
+  text-align: left;
+}
+
+.methodIcon {
+  margin-right: 8px;
+  font-size: 18px;
+}
+
+.orderSummary {
+  position: sticky;
+  top: 24px;
+  margin-bottom: 16px;
+}
+
+.summaryItem {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.total {
+  text-align: center;
+  font-size: 18px;
+  margin: 16px 0;
+}
+
+.payButton {
+  height: 48px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.securityInfo {
+  margin-top: 16px;
+}
+
+.securityItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.securityIcon {
+  color: #52c41a;
+  margin-right: 8px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .paymentContainer {
+    padding: 16px;
+  }
+  
+  .planCard {
+    height: auto;
+  }
+  
+  .orderSummary {
+    position: static;
+    margin-top: 24px;
+  }
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.paymentContainer > * {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* 支付方式按钮样式 */
+.paymentMethods .ant-radio-button-wrapper {
+  border-radius: 6px !important;
+  margin-bottom: 8px;
+  border: 1px solid #d9d9d9;
+}
+
+.paymentMethods .ant-radio-button-wrapper:hover {
+  border-color: #1890ff;
+}
+
+.paymentMethods .ant-radio-button-wrapper-checked {
+  background: #e6f7ff;
+  border-color: #1890ff;
+}
+
+/* 订阅计划卡片特殊样式 */
+.planCard .ant-card-body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* 模态框样式优化 */
+.ant-modal-content {
+  border-radius: 8px;
+}
+
+.ant-form-item-label > label {
+  font-weight: 500;
+}

@@ -1,0 +1,36 @@
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.about-card, .hiring-card {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-content {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    padding: 16px;
+  }
+  
+  .section-title {
+    font-size: 18px;
+  }
+  
+  .section-content {
+    font-size: 14px;
+  }
+}

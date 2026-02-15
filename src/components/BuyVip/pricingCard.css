@@ -1,0 +1,66 @@
+/* src/components/PricingCard.css */
+
+.pricing-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 320px;
+  margin: 16px;
+}
+
+.pricing-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.plan-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.plan-price .price {
+  font-size: 32px;
+  font-weight: bold;
+  color: #1890ff;
+}
+
+.currency {
+  font-size: 14px;
+  color: #888;
+}
+
+.duration {
+  color: #999;
+  margin: 12px 0;
+}
+
+.features {
+  list-style: none;
+  padding-left: 0;
+  text-align: left;
+  margin: 20px 0;
+}
+
+.feature-item {
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.select-btn {
+  background-color: #1890ff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.select-btn:hover {
+  background-color: #40a9ff;
+}

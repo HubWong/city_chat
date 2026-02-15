@@ -1,0 +1,88 @@
+
+.album-page-container {
+  padding: 24px;
+  background-color: #f9f9f9;
+}
+
+.album-page-container .ant-card {
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.album-page-container .ant-card-head {
+  border-bottom: none;
+  padding: 0 16px;
+}
+
+.album-page-container .ant-card-head-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.album-page-container .ant-card-extra {
+  font-size: 14px;
+  color: #888;
+}
+
+.album-page-container .ant-upload-list-picture-card {
+  margin-top: 16px;
+}
+
+.album-page-container .ant-upload-list-picture-card .ant-upload-list-item {
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.album-page-container .ant-upload-list-picture-card .ant-upload-list-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.album-page-container .ant-upload-list-picture-card .ant-upload-list-item-thumbnail img {
+  object-fit: cover;
+}
+
+.album-page-container .ant-upload-list-picture-card .ant-upload-list-item-actions {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.album-page-container .ant-upload-list-picture-card .ant-upload-list-item-actions button {
+  color: #fff;
+  opacity: 1;
+}
+
+.album-page-container .ant-upload-list-picture-card .ant-upload-list-item-name {
+  display: none;
+}
+
+.album-page-container .ant-modal-content {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.album-page-container .ant-modal-body {
+  padding: 0;
+}
+
+.album-page-container .ant-modal-footer {
+  text-align: center;
+  padding: 12px 16px;
+  border-top: 1px solid #e8e8e8;
+}
+
+.album-page-container .ant-modal-footer .ant-btn {
+  min-width: 100px;
+}
+
+.album-page-container .ant-btn-dangerous {
+  background-color: #ff4d4f;
+  border-color: #ff4d4f;
+  color: #fff;
+}
+
+.album-page-container .ant-btn-dangerous:hover {
+  background-color: #ff7875;
+  border-color: #ff7875;
+}

@@ -1,0 +1,23 @@
+.room-list-page {
+  min-height: 100vh;
+  background-color: var(--bg-color);
+}
+
+.room-list-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: var(--spacing-xl) var(--spacing-md);
+}
+
+.loading-container {
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}

@@ -1,0 +1,66 @@
+.gift-container {
+  position: fixed;
+  transform: translate3d(-50%, -50%, 0);
+  z-index: 9999;
+  will-change: transform, opacity;
+  pointer-events: none;
+}
+
+/* 入场动画 */
+.gift-container.enter {
+  opacity: 0;
+  transform: translate3d(-50%, calc(-50% - 30px), 0) scale(0.6);
+}
+.gift-container.enter-active {
+  opacity: 1;
+  transform: translate3d(-50%, -50%, 0) scale(1);
+  transition: all 0.3s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+/* 活跃状态动画 */
+.gift-container.active .gift-icon {
+  animation: pulse var(--animation-duration) infinite alternate;
+}
+.gift-container.active .particle-effect {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, var(--gift-color) 0%, transparent 70%);
+  animation: particles calc(var(--animation-duration)/2) ease-out;
+  opacity: 0;
+}
+
+/* 退场动画 */
+.gift-container.exit {
+  opacity: 0;
+  transform: translate3d(-50%, calc(-50% + 20px), 0) scale(0.8);
+  transition: all 0.5s ease-in;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.15); }
+}
+
+@keyframes particles {
+  0% { transform: scale(0.3); opacity: 0.7; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+.gift-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.gift-icon {
+  font-size: 32px;
+  color: var(--gift-color);
+}
+
+.gift-name {
+  color: var(--gift-color);
+  font-weight: bold;
+  text-shadow: 0 0 3px rgba(0,0,0,0.2);
+}

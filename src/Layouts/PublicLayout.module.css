@@ -1,0 +1,50 @@
+
+.chat-container {
+  min-height: 100vh;
+}
+
+.chat-header {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+.noticebadge {
+  font-size: "12px";
+  line-height: "16px";
+  margin-left: "4px";
+}
+
+/* 修改菜单背景色和文字颜色 */
+.ant-menu {
+  background-color: #044d50 !important;
+  color: white !important;
+}
+
+/* 修改子菜单背景色 */
+.ant-menu-sub {
+  background-color: rgb(16, 71, 83) !important;
+}
+
+/* 修改选中项样式 */
+.ant-menu-item-selected {
+  background-color: #21B0AF !important;
+}
+
+
+ 
+.chat-content {
+  margin-top: 64px;
+}
+
+.chat-footer {
+  text-align: center;
+  background: #191a1b;
+}
+
+
+
+@media (max-width: 768px) {
+  .chat-content {
+    padding: 12px;
+  }
+}

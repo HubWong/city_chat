@@ -1,0 +1,21 @@
+.resume-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+  padding: 20px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .resume-list {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 16px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .resume-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

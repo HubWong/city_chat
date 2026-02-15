@@ -1,0 +1,74 @@
+.dashboard-container {
+  padding: 24px;
+  background: #f0f2f5;
+  min-height: 100vh;
+}
+
+.dashboard-title {
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 600;
+  margin-bottom: 24px;
+  font-size: 24px;
+}
+
+.custom-card {
+  border-radius: 8px;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.03), 
+              0 1px 6px -1px rgba(0,0,0,0.02), 
+              0 2px 4px 0 rgba(0,0,0,0.02);
+  transition: all 0.3s;
+}
+
+.custom-card:hover {
+  box-shadow: 0 6px 16px 0 rgba(0,0,0,0.08);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.country-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.country-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.country-name {
+  width: 80px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.country-count {
+  color: #1890ff;
+  font-weight: 500;
+}
+
+.statistic-item {
+  margin-top: 16px;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+
+.error-card {
+  margin: 24px;
+}
+
+.error-text {
+  color: #ff4d4f;
+}
